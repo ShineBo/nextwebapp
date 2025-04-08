@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Bungee_Tint } from "next/font/google";
+import Link from "next/link";
 
 const bungee = Bungee_Tint({
   subsets: ["latin"],
@@ -16,6 +17,18 @@ const MyApp = () => {
         <h1 className={`${bungee.className} text-2xl font-bold m-2 p-2`}>
           Hello World!!
         </h1>
+        <Link
+          href="/products"
+          className="border border-amber-300 w-fit mb-4 p-2 rounded bg-cyan-300 text-gray-900"
+        >
+          Go to Products
+        </Link>
+        <Link
+          href="/foo"
+          className="border border-amber-300 w-fit mb-4 p-2 rounded bg-red-300 text-gray-900"
+        >
+          Go to Foo
+        </Link>
         <div>
           <Image
             className="mb-4"
