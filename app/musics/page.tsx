@@ -100,7 +100,7 @@ const Products = () => {
         <h1 className="mt-16 text-3xl font-bold text-slate-100">
           Musical Instruments
         </h1>
-        <div className="max-w-sm mx-auto my-5 border p-5 rounded-lg shadow-lg">
+        <div className="max-w-sm mx-auto my-5 bg-amber-100 opacity-90 border p-5 rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold mb-4">Create New Instrument</h1>
           <label className="text-2xl font-bold" htmlFor="name">
             Name
@@ -109,6 +109,7 @@ const Products = () => {
             name="name"
             className="border p-2 w-full rounded-2xl my-2"
             type="text"
+            placeholder="Enter instrument name"
             value={newInstrument.name}
             onChange={(e) =>
               setNewInstrument((prev) => ({
@@ -124,6 +125,7 @@ const Products = () => {
             name="age"
             className="border p-2 w-full rounded-2xl my-2"
             type="text"
+            placeholder="Enter instrument description"
             value={newInstrument.description}
             onChange={(e) =>
               setNewInstrument((prev) => ({
@@ -139,6 +141,7 @@ const Products = () => {
             name="email"
             className="border p-2 w-full rounded-2xl my-2"
             type="number"
+            placeholder="Enter instrument price"
             value={newInstrument.price}
             onChange={(e) =>
               setNewInstrument((prev) => ({
@@ -154,6 +157,7 @@ const Products = () => {
             name="salary"
             className="border p-2 w-full rounded-2xl my-2"
             type="number"
+            placeholder="Enter instrument likes"
             value={newInstrument.likes}
             onChange={(e) =>
               setNewInstrument((prev) => ({
@@ -169,6 +173,7 @@ const Products = () => {
             name="salary"
             className="border p-2 w-full rounded-2xl my-2"
             type="text"
+            placeholder="Enter instrument image URL"
             value={newInstrument.img}
             onChange={(e) =>
               setNewInstrument((prev) => ({
