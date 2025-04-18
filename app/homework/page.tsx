@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-
 type TPhoto = {
   albumId: number;
   id: number;
@@ -66,14 +65,17 @@ export default function PhotosPage() {
                 key={photo.id}
                 className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center hover:shadow-lg transition-shadow"
               >
-                <Image
-                  src={photo.thumbnailUrl}
-                  alt={photo.title}
-                  width={150}
-                  height={150}
-                  className="rounded w-full h-auto"
-                />
-                <p className="text-sm text-center mt-2">{photo.title}</p>
+                <div className="text-xs mt-2 text-center space-y-1">
+                  <p>
+                    <strong>ID:</strong> {photo.id}
+                  </p>
+                  <p>
+                    <strong>Album ID:</strong> {photo.albumId}
+                  </p>
+                  <p>
+                    <strong>Title:</strong> {photo.title}
+                  </p>
+                </div>{" "}
               </div>
             ))}
           </div>
